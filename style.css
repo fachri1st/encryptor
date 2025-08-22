@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('assets/images.jpg');
+    background-position: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    opacity: 0.9;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.header {
+    background: linear-gradient(135deg, #E4004B 0%, #00f2fe 100%);
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.content {
+    padding: 40px;
+}
+
+.cipher-selector {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.cipher-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cipher-btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #33A1E0;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cipher-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cipher-btn.active {
+    background: #08CB00;
+    transform: translateY(-2px);
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+    font-size: 1rem;
+}
+
+.input-group input, .input-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.input-group input:focus, .input-group textarea:focus {
+    outline: none;
+    border-color: #4facfe;
+    box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.1);
+}
+
+.input-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.key-input {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.action-btn {
+    padding: 15px 35px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.encrypt-btn {
+    background: #08CB00;
+}
+
+.decrypt-btn {
+    background: #FF9B00;
+}
+
+.action-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.action-btn:active {
+    transform: translateY(-1px);
+}
+
+.result {
+    background: linear-gradient(135deg, #78C841 0%, #B4E50D 100%);
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 25px;
+}
+
+.result h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.result-text {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    line-height: 1.6;
+    word-break: break-all;
+    min-height: 60px;
+    border: 2px solid #e0e0e0;
+}
+
+.hidden {
+    display: none;
+}
+
+.info-box {
+    background: rgba(79, 172, 254, 0.1);
+    border: 2px solid #4facfe;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.info-box h4 {
+    color: #4facfe;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.info-box p {
+    color: #666;
+    line-height: 1.5;
+}
+
+.footer {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    padding: 25px 30px;
+    text-align: center;
+    color: white;
+    border-top: 3px solid #4facfe;
+}
+
+.footer p {
+    margin: 5px 0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.footer p:first-child {
+    opacity: 0.9;
+}
+
+.footer p strong {
+    color: #4facfe;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        border-radius: 15px;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .key-input {
+        grid-template-columns: 1fr;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .footer {
+        padding: 20px 15px;
+    }
+
+    .footer p {
+        font-size: 0.9rem;
+    }
+}

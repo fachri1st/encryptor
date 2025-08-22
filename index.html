@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Enkripsi & Dekripsi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Aplikasi Enkripsi & Dekripsi</h1>
+            <p>Caesar Cipher & Vigenere Cipher</p>
+        </div>
+
+        <div class="content">
+            <div class="cipher-selector">
+                <div class="cipher-buttons">
+                    <button class="cipher-btn active" data-cipher="caesar">Caesar Cipher</button>
+                    <button class="cipher-btn" data-cipher="vigenere">Vigenere Cipher</button>
+                </div>
+            </div>
+
+            <div id="caesar-info" class="info-box">
+                <h4>Caesar Cipher</h4>
+                <p>Caesar Cipher menggeser setiap huruf dalam alfabet sejumlah posisi yang ditentukan oleh kunci (shift). Misalnya, dengan shift 3: A→D, B→E, C→F, dst.</p>
+            </div>
+
+            <div id="vigenere-info" class="info-box hidden">
+                <h4>Vigenere Cipher</h4>
+                <p>Vigenère Cipher menggunakan kata kunci untuk mengenkripsi teks. Setiap huruf dari kata kunci menentukan berapa banyak huruf dalam teks asli akan digeser.</p>
+            </div>
+
+            <div class="input-group">
+                <label for="inputText">Masukkan Teks:</label>
+                <textarea id="inputText" placeholder="Ketik teks yang ingin dienkripsi atau didekripsi..."></textarea>
+            </div>
+
+            <div class="key-input">
+                <div class="input-group">
+                    <label for="caesarShift" id="caesar-label">Caesar Shift (1-25):</label>
+                    <label for="vigenereKey" id="vigenere-label" class="hidden">Vigenere Key:</label>
+                    <input type="number" id="caesarShift" min="1" max="25" value="3" placeholder="Masukkan angka shift">
+                    <input type="text" id="vigenereKey" class="hidden" placeholder="Masukkan kata kunci">
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="action-btn encrypt-btn" onclick="encrypt()">Encrypt</button>
+                <button class="action-btn decrypt-btn" onclick="decrypt()">Decrypt</button>
+            </div>
+
+            <div id="result" class="result hidden">
+                <h3>Hasil:</h3>
+                <div id="resultText" class="result-text"></div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Aplikasi ini untuk memenuhi tugas akhir Mata Kuliah Keamanan Informasi Siber</p>
+            <p><strong>oleh : Maulana Fachri - 20670157</strong></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
