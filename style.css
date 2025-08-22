@@ -28,6 +28,7 @@ body {
     padding: 30px;
     text-align: center;
     color: white;
+    border-bottom: 3px solid #4facfe;
 }
 
 .header h1 {
@@ -258,4 +259,5 @@ body {
     }
 
 }
+
 
