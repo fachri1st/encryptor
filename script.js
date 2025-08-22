@@ -1,13 +1,9 @@
 let currentCipher = 'caesar';
 
-// Event listeners untuk tombol cipher
 document.querySelectorAll('.cipher-btn').forEach(btn => {
     btn.addEventListener('click', function() {
-        // Remove active class from all buttons
         document.querySelectorAll('.cipher-btn').forEach(b => b.classList.remove('active'));
-        // Add active class to clicked button
         this.classList.add('active');
-        
         currentCipher = this.dataset.cipher;
         toggleCipherInputs();
     });
@@ -105,7 +101,7 @@ function encrypt() {
     } else {
         const key = document.getElementById('vigenereKey').value;
         if (!key.trim()) {
-            alert('Harap masukkan kata kunci untuk Vigenère Cipher!');
+            alert('Harap masukkan kata kunci untuk Vigenere Cipher!');
             return;
         }
         result = vigenereCipher(text, key);
@@ -145,13 +141,10 @@ function decrypt() {
 function showResult(result) {
     document.getElementById('resultText').textContent = result;
     document.getElementById('result').classList.remove('hidden');
-    
-    // Smooth scroll to result
     document.getElementById('result').scrollIntoView({ 
         behavior: 'smooth', 
         block: 'nearest' 
     });
 }
 
-// Initialize the display
 toggleCipherInputs();
